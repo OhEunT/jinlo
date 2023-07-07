@@ -1,0 +1,134 @@
+header {
+  width: 1500px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  h1 {
+    padding-left: 100px;
+    padding-top: 50px;
+
+    .logo {
+      display: block;
+      width: 150px;
+      height: 100px;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      z-index: 50;
+      animation-name: logo;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes logo {
+      0% {
+        background-image: url(../img/header/logo.png);
+      }
+      30% {
+        background-image: url(../img/header/logo_hajin.png);
+      }
+      60% {
+        background-image: url(../img/header/logo_hajin2.png);
+      }
+      100% {
+        background-image: url(../img/header/logo.png);
+      }
+    }
+  }
+
+  .gnb {
+    > ul {
+      position: absolute;
+      top: 40px;
+      right: 170px;
+      z-index: 20;
+
+      > li {
+        float: left;
+
+        &:hover {
+          > a {
+            background-color: #24418bbf;
+            color: #fff;
+          }
+        }
+
+        &:nth-of-type(2) {
+          &:hover {
+            > a {
+              background-color: #0d96d4bf;
+              color: #fff;
+            }
+          }
+        }
+        > a {
+          display: block;
+          width: 180px;
+          height: 50px;
+          font: 500 25px/50px "Noto Sans";
+          color: #fff;
+          text-align: center;
+        }
+
+        .sub {
+          display: none;
+          overflow: hidden;
+          transition: height 0.8s ease;
+          z-index: 19;
+
+          > li {
+            a {
+              display: block;
+              background-color: #0d96d4;
+              width: 180px;
+              height: 50px;
+              font: 200 18px/50px "Noto Sans KR";
+              color: #fff;
+              text-align: center;
+
+              &:hover {
+                background-color: #24418b;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .member {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    z-index: 10;
+
+    li {
+      float: left;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+      &:first-child {
+        &::after {
+          content: "｜";
+          display: inline-block;
+          color: #fff;
+          padding-left: 5px;
+        }
+      }
+      a {
+        display: inline-block;
+        font: 500 18px/1 "Noto sans";
+        color: #fff;
+        /* -webkit-text-stroke: 1px yellow; */
+        text-shadow: -1px 0 #0d96d4, 0 1px #0d96d4, 1px 0 #0d96d4,
+          0 -1px #0d96d4;
+      }
+    }
+  }
+}

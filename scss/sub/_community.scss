@@ -1,0 +1,30 @@
+#customer-contents {
+  width: 100%;
+  height: 150vh;
+  position: relative;
+
+  .wrap {
+    position: absolute;
+
+    article {
+      display: none;
+      width: 1500px;
+      background-color: #fff;
+      &.on {
+        display: block;
+      }
+    }
+
+    #qna {
+      width: 100%;
+      height: 100%;
+      background-color: orange;
+    }
+
+    #community {
+      width: 100%;
+      height: 100%;
+      background-color: greenyellow;
+    }
+  }
+}
